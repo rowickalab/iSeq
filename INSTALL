@@ -1,0 +1,29 @@
+Please visit the main iSeq main (http://breakome.utmb.edu/software.html) page for installation instructions.
+Here is a brief description
+1 - How to install hygestat_bless, hygestat_genes, hygestat_bed and find_gene
+
+    Download hygestat_bless from the main page
+    Decompress the file $ tar xvzf hygestat_bless-xxx.tar.gz
+    Go to the main directory $ cd hygestat_bless-xxx
+    Run the configuration script $ ./configure [option]
+    install hygestat_BLESS with bowtie, fastqc and samstat
+        If bowtie is not in your PATH (check with the command $ which bowtie): run $ ./configure --with-bowtie=/path/to/bowtie/ (step 4)
+        To install hygestat_BLESS with fastqc: run $ ./configure --with-fastqc=/path/to/fastqc/ (step 4)
+        To install hygestat_BLESS with samstat: run $ ./configure --with-samstat=/path/to/samstat/ (step 4)
+        Example: installation with bowtie, fastqc and samstat : run $ ./configure --with-bowtie=/path/to/bowtie/ --with-fastqc=/path/to/fastqc/ --with-samstat=/path/to/samstat/
+        If you do not have administration privileges on your computer: run $ ./configure --prefix=/path/to/install/ , then $ export PATH=$PATH:/path/to/install/
+    Run the Makefile $ make
+    Proceed to the installation (as root) $ make install
+    If successfuly installed open the help menu of hygestat_BLESS $ hygestat_bless --help
+
+To install hygestat_genes, hygestat_bed and find_gene perform steps 2, 3 and 5 above using appropriate name instead of "hygestat_bless".
+See tutorial for information on how to install hygestat_annotation and hygestat_plots. 
+
+2 - How to run hygestat_BLESS
+hygestat_BLESS currently supports two types of usage:
+
+    hygestat_bless -i config_file.txt [default]
+    config_file.txt : configuration file that contains all the parameters (example can be downloaded from the main page).
+    This is the recommended option as many parameters can be kept as default.
+    hygestat_bless [options] control.[fastq/zip] treatment.[fastq/zip]
+    For this option, all parameters are specified in the command line. Visit the main page for the list of options 
