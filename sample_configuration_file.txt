@@ -1,0 +1,59 @@
+# Organism name (human, mouse, vanderplanki, yeast: Default = human)
+mouse
+# Type of analysis (with or without correction: Default = without correction)
+without_correction
+# First sample (expecting the treatment fastq file: Default = treatment.fastq)
+B_J1_0_s.fastq
+# Nature of sample (BLESS or genomic: Default = BLESS)
+bless
+# Second sample (expecting the control fastq file: Default = control.fastq)
+g_J1_0_s.fastq
+# Nature of sample (BLESS or genomic: Default = GENOMIC)
+genomic
+# If type of analysis is with_correction give samples 3,4,5
+sample3.fastq
+# Nature of sample 3 (BLESS or genomic: Default = BLESS)
+bless
+sample4.fastq
+# Nature of sample 4 (BLESS or genomic: Default = BLESS)
+bless
+sample5.fastq
+# Nature of sample 5 (BLESS or genomic: Default = BLESS)
+bless
+# Fragile band data (organism fragile band: Default human ncbi)
+fragile_bands_mouse.txt
+# Cyto band data (organism cyto band: Default human ncbi)
+cyto_bands_mouse.txt
+# Output name (name of your output: Default output.txt)
+new-res.txt
+# resolution windows size (Default : 250)
+10250
+# Windows advance (Default : 1, in reality windows size +1)
+1
+# time course analysis rarefication table (table must contain control and treatment for each time point: Default NO) time_course_bless_genomic_j1.txt
+NO
+# rarefaction if running time course (Defalut : No)
+false
+# Number of random samples for rarefaction (Default : 20)
+20
+# Output directory (Default : Bless_results)
+Bless_results
+# Genome directory (Default : current directory)
+/data24TB/store/julesberlin/mouse/mm10
+# Genome mappability (Default : current directory)
+/data24TB/store/julesberlin/mouse/map_45/
+# data files directory (Default : current directory)
+"./"
+# Use previous mapping (debugging purposes only). Will not run bowtie and use available mapping (Default : false)
+false
+# telomere correction  (Default : false)
+false
+# Sequencing quality check using FASTQC (Default : false)
+false
+# Post mapping quality check using Samstat (Default : false)
+false
+# Number of threads (Default : 1)
+16
+#running mode quiet  (Default : true)
+true
+
